@@ -1,0 +1,305 @@
+@import "./reset";
+@import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@font-face {
+  font-family: "Calibre";
+  src: url("../fonts/Calibre/calibre-test-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Calibre Regular";
+  src: url("../fonts/Calibre/calibre-test-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("/fonts/Sf/SFMonoRegular.woff") format("woff");
+}
+// Colors
+$theme-navy-color: rgb(10, 25, 47);
+$theme-gray-color: rgb(136, 146, 176);
+$theme-dark-gray-color: rgb(45, 57, 82);
+$theme-green-color: rgb(86, 196, 107);
+$theme-lavender-color: rgb(204, 214, 246);
+$theme-light-green-color: rgb(100, 255, 218);
+
+// Fonts
+$cali-font: Calibre, SF Mono;
+$cali-regular-font: Calibre Regular, SF Mono;
+$sf-font: SF Mono, San Fransisco, Roboto;
+
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: $theme-navy-color;
+  font-family: Calibre;
+  font-size: 20px;
+}
+
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+    z-index: 10;
+    .header-logo {
+      font-size: 40px;
+      color: $theme-light-green-color;
+      cursor: pointer;
+      border: 3px solid $theme-light-green-color;
+      padding: 16px;
+      &:hover {
+        background-color: rgba($theme-light-green-color, 0.1);
+      }
+    }
+    .nav-links-container {
+      margin-left: auto;
+      ol {
+        counter-reset: counter;
+        .nav-links {
+          display: flex;
+          align-items: center;
+          li {
+            counter-increment: counter;
+            color: $theme-gray-color;
+            font-family: $sf-font;
+            margin: 0 20px;
+            font-size: 13px;
+            line-height: 1.3;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            &:hover {
+              color: rgba($theme-light-green-color, 0.8);
+              cursor: pointer;
+            }
+            &::before {
+              content: "0" counter(counter) "." " ";
+              text-align: right;
+              font-family: monospace;
+              color: $theme-light-green-color;
+              font-size: 12px;
+            }
+          }
+          button {
+            position: relative;
+            background-color: $theme-navy-color;
+            color: $theme-light-green-color;
+            border: 1px solid $theme-light-green-color;
+            border-radius: 4px;
+            font-family: $sf-font;
+            cursor: pointer;
+            padding: 10px 18px;
+            margin-left: 10px;
+            &:hover {
+              background-color: rgba($theme-light-green-color, 0.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  main {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 150px;
+    margin: 0 auto;
+    counter-reset: section 0;
+
+    #section-title-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1000px;
+      min-height: 90vh;
+      margin: 0 auto;
+      .title-greeting {
+        font-size: 16px;
+        font-family: $sf-font;
+        color: $theme-light-green-color;
+        margin-left: 2px;
+      }
+
+      .title {
+        font-size: 80px;
+        font-family: $cali-font;
+        line-height: 1.3;
+        color: $theme-lavender-color;
+      }
+
+      .title-desc {
+        font-size: 70px;
+        font-family: $cali-font;
+        color: $theme-gray-color;
+        margin: 0 12px;
+      }
+
+      .title-intro {
+        font-family: $cali-regular-font;
+        margin: 24px 7px;
+        font-size: 21px;
+        color: $theme-gray-color;
+        line-height: 1.3;
+      }
+
+      a {
+        background-color: $theme-navy-color;
+        color: $theme-light-green-color;
+        border-radius: 4px;
+        font-family: $sf-font;
+        cursor: pointer;
+        padding: 10px 18px;
+        margin-left: 10px;
+        text-decoration: none;
+        background-color: rgba($theme-light-green-color, 0.1);
+        &:hover {
+          i {
+            color: yellow;
+          }
+        }
+      }
+    }
+
+    #section-about-me {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 1000px;
+      min-height: 90vh;
+      margin: 0 auto;
+      .about-heading {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        font-size: 32px;
+        font-family: $cali-regular-font;
+        color: $theme-lavender-color;
+        width: 100%;
+        font-weight: 600;
+        white-space: nowrap;
+        &::before {
+          counter-increment: section 1;
+          content: "0" counter(section) ".";
+          margin-right: 10px;
+          margin-bottom: -5px;
+          font-family: $sf-font;
+          color: $theme-light-green-color;
+          font-size: 20px;
+        }
+        &::after {
+          content: "";
+          margin: 0 20px;
+          height: 1px;
+          background-color: $theme-dark-gray-color;
+          width: 280px;
+        }
+      }
+      .about-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 40px;
+        width: 100%;
+        .about-text-container {
+          max-width: 500px;
+          width: 70%;
+          font-size: 20px;
+          font-family: $cali-regular-font;
+          line-height: 1.3;
+          color: $theme-gray-color;
+          p {
+            margin-bottom: 20px;
+          }
+        }
+        .about-img-container {
+          .about-img-wrapper {
+            position: relative;
+            height: 100%;
+            max-width: 300px;
+            margin-left: 40px;
+            .about-img-back-overlay {
+              position: absolute;
+              top: 12px;
+              left: 12px;
+              z-index: -1;
+              height: 100%;
+              width: 100%;
+              border: 6px solid rgba($theme-light-green-color, 0.8);
+              border-radius: 4px;
+              transition: transform 0.4s ease-in-out 0s;
+            }
+            img {
+              height: 300px;
+              width: 100%;
+              max-width: 300px;
+              border-radius: 4px;
+              object-fit: cover;
+              background-position: center;
+            }
+            &:hover .about-img-back-overlay {
+              transform: translate(-6px, -6px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .content {
+    main {
+      padding: 0 70px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .content {
+    main {
+      padding: 0 25px;
+
+      #section-about-me {
+        .about-heading {
+          &::after {
+            content: "";
+            margin: 0 20px;
+            height: 1px;
+            background-color: $theme-dark-gray-color;
+            width: 100%;
+          }
+        }
+        .about-container {
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+
+          .about-text-container {
+            max-width: 500px;
+            width: 100%;
+            font-size: 20px;
+            font-family: $cali-regular-font;
+            line-height: 1.3;
+            color: $theme-gray-color;
+            p {
+              margin-bottom: 20px;
+            }
+          }
+          .about-img-container {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
