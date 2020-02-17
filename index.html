@@ -23,6 +23,7 @@
     ></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/hamburgers.css" />
   </head>
   <body>
     <!-- NAVIGATION  -->
@@ -33,7 +34,7 @@
         </div>
         <div id="mobile-nav" class="mobile-nav">
           <div class="mobile-nav-links">
-            <ul>
+            <ol>
               <a href="#section-about-me"><li>About</li></a>
               <a href="#section-project-showcase"><li>Projects</li></a>
               <a href="#section-contact-me"><li>Contact</li></a>
@@ -41,9 +42,19 @@
                 <div class="button-overlay"></div>
                 Resume
               </button>
-            </ul>
+            </ol>
           </div>
         </div>
+        <button
+          id="hamburger"
+          class="hamburger hamburger--elastic"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
         <div
           id="burger-nav"
           class="burger-nav"
@@ -387,5 +398,13 @@
       }
     }
     document.getElementById("burger-nav").addEventListener("click", toggleMenu);
+
+    // New Hamburger toggle
+    // Class Toggle
+    document.getElementById("hamburger").addEventListener("click", function() {
+      document.getElementById("hamburger").classList.toggle("is-active");
+    });
+
+    document.getElementById("hamburger").addEventListener("click", toggleMenu);
   </script>
 </html>
