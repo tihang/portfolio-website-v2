@@ -33,8 +33,6 @@ $sf-font: SF Mono, San Fransisco, Roboto;
 
 body {
   width: 100%;
-  min-height: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
   background-color: $theme-navy-color;
   font-family: Calibre;
@@ -114,6 +112,8 @@ header {
 
 .content {
   display: flex;
+  width: 100%;
+  align-items: center;
   main {
     width: 100%;
     max-width: 1600px;
@@ -184,7 +184,7 @@ header {
       justify-content: center;
       max-width: 1000px;
       min-height: 100vh;
-      margin: 0 auto;
+      margin: 200px auto;
       .about-heading {
         display: flex;
         align-items: center;
@@ -279,7 +279,7 @@ header {
       justify-content: center;
       max-width: 1000px;
       min-height: 100vh;
-      padding-bottom: 150px;
+      padding: 250px 0;
       margin: 0 auto;
       .project-showcase-heading {
         display: flex;
@@ -311,7 +311,7 @@ header {
       .project-showcase-container {
         display: flex;
         width: 100%;
-        margin: 40px 0px;
+        margin: 60px 0px;
         justify-content: space-between;
         .showcase-image-container {
           height: 300px;
@@ -519,7 +519,7 @@ header {
 }
 
 footer {
-  position: relative;
+  display: block;
   width: 100%;
   height: 10vh;
   background-color: black;
@@ -533,19 +533,40 @@ footer {
     }
   }
 
+  // Hide floating social icons
   .floating-email {
     display: none;
   }
-
   .floting-social {
     display: none;
   }
 }
 
 @media (max-width: 720px) {
+  //Hide nav for small screen
+  nav {
+    .nav-links-container {
+      display: none;
+    }
+  }
   .content {
     main {
       padding: 0 25px;
+
+      #section-title-hero {
+        .title-greeting {
+          font-size: 14px;
+        }
+        .title {
+          font-size: 65px;
+        }
+        .title-desc {
+          font-size: 50px;
+        }
+        .title-intro {
+          font-size: 18px;
+        }
+      }
 
       #section-about-me {
         .about-heading {
@@ -575,6 +596,9 @@ footer {
           }
           .about-img-container {
             margin-top: 50px;
+            .about-img-wrapper {
+              margin-left: 10px;
+            }
           }
         }
       }

@@ -146,8 +146,6 @@ table {
 }
 body {
   width: 100%;
-  min-height: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
   background-color: #0a192f;
   font-family: Calibre;
@@ -225,6 +223,8 @@ header nav .nav-links-container ol .nav-links button:hover {
 
 .content {
   display: flex;
+  width: 100%;
+  align-items: center;
 }
 .content main {
   width: 100%;
@@ -289,7 +289,7 @@ header nav .nav-links-container ol .nav-links button:hover {
   justify-content: center;
   max-width: 1000px;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 200px auto;
 }
 .content main #section-about-me .about-heading {
   display: flex;
@@ -377,7 +377,7 @@ header nav .nav-links-container ol .nav-links button:hover {
   justify-content: center;
   max-width: 1000px;
   min-height: 100vh;
-  padding-bottom: 150px;
+  padding: 250px 0;
   margin: 0 auto;
 }
 .content main #section-project-showcase .project-showcase-heading {
@@ -410,7 +410,7 @@ header nav .nav-links-container ol .nav-links button:hover {
 .content main #section-project-showcase .project-showcase-container {
   display: flex;
   width: 100%;
-  margin: 40px 0px;
+  margin: 60px 0px;
   justify-content: space-between;
 }
 .content main #section-project-showcase .project-showcase-container .showcase-image-container {
@@ -606,7 +606,7 @@ header nav .nav-links-container ol .nav-links button:hover {
 }
 
 footer {
-  position: relative;
+  display: block;
   width: 100%;
   height: 10vh;
   background-color: black;
@@ -626,8 +626,24 @@ footer {
   }
 }
 @media (max-width: 720px) {
+  nav .nav-links-container {
+    display: none;
+  }
+
   .content main {
     padding: 0 25px;
+  }
+  .content main #section-title-hero .title-greeting {
+    font-size: 14px;
+  }
+  .content main #section-title-hero .title {
+    font-size: 65px;
+  }
+  .content main #section-title-hero .title-desc {
+    font-size: 50px;
+  }
+  .content main #section-title-hero .title-intro {
+    font-size: 18px;
   }
   .content main #section-about-me .about-heading::after {
     content: "";
@@ -654,6 +670,9 @@ footer {
   }
   .content main #section-about-me .about-container .about-img-container {
     margin-top: 50px;
+  }
+  .content main #section-about-me .about-container .about-img-container .about-img-wrapper {
+    margin-left: 10px;
   }
 }
 
