@@ -9,10 +9,7 @@
       content="Web Developer, Portfolio, MERN Stack, Tihang
       Rai, Web development, Javascript, New York City, NYC"
     />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Tihang Rai | Full-Stack Web Dev</title>
     <script
@@ -54,6 +51,8 @@
           id="hamburger"
           class="hamburger hamburger--elastic"
           type="button"
+          data-aos="fade-left"
+          data-aos-delay="300"
         >
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -411,19 +410,22 @@
       .getElementsByClassName("mobile-nav")[0]
       .addEventListener("click", toggleMenu);
 
+    // Close menu if body is clicked
+    document.getElementsByTagName("html").addEventListener("click", toggleMenu);
+
     // Scroll listener for navbar
-    var lastScrollTop = 0;
-    $(window).scroll(function() {
-      var st = $(this).scrollTop();
-      var banner = $("nav");
-      setTimeout(function() {
-        if (st > lastScrollTop) {
-          banner.addClass("hide");
-        } else {
-          banner.removeClass("hide");
-        }
-        lastScrollTop = st;
-      }, 100);
-    });
+    // var lastScrollTop = 0;
+    // $(window).scroll(function() {
+    //   var st = $(this).scrollTop();
+    //   var banner = $("nav");
+    //   setTimeout(function() {
+    //     if (st > lastScrollTop) {
+    //       banner.addClass("hide");
+    //     } else {
+    //       banner.removeClass("hide");
+    //     }
+    //     lastScrollTop = st;
+    //   }, 100);
+    // });
   </script>
 </html>
