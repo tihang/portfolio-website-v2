@@ -31,8 +31,13 @@ $cali-font: Calibre, SF Mono;
 $cali-regular-font: Calibre Regular, SF Mono;
 $sf-font: SF Mono, San Fransisco, Roboto;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
+  overflow-x: hidden;
   box-sizing: border-box;
   background-color: $theme-navy-color;
   font-family: Calibre;
@@ -54,6 +59,9 @@ header {
     z-index: 10;
     // mobile nav inititially hidden
     .burer-nav {
+      display: none;
+    }
+    .mobile-nav {
       display: none;
     }
     .header-logo {
@@ -116,7 +124,7 @@ header {
 
 .content {
   main {
-    width: 100%;
+    width: 80%;
     max-width: 1600px;
     padding: 0 150px;
     margin: 0 auto;
@@ -550,10 +558,48 @@ footer {
       .nav-links-container {
         display: none;
       }
+      // mobile navbar style
+      .mobile-nav {
+        display: block;
+        visibility: hidden;
+        width: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        background-color: $theme-light-navy-color;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        .mobile-nav-links {
+          display: block;
+          height: 100%;
+          width: 100%;
+          ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 140px;
+            align-items: center;
+            a {
+              text-align: center;
+              font-size: 17px;
+              font-family: $sf-font;
+              padding: 40px 0;
+              li {
+                height: 30px;
+                color: $theme-light-green-color;
+              }
+            }
+          }
+        }
+      }
       // Show mobile nav on this breakpoint
       .burger-nav {
         display: block;
-        position: relative;
+        margin: 10px;
+        z-index: 100;
         ul {
           li {
             margin: 10px 0;

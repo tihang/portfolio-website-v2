@@ -13,6 +13,11 @@
 
     <title>Tihang Rai | Full-Stack Web Dev</title>
     <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/f1494ea61d.js"
       crossorigin="anonymous"
     ></script>
@@ -22,17 +27,36 @@
   <body>
     <!-- NAVIGATION  -->
     <header>
-      <nav>
-        <div data-aos="fade-right" data-aos-delay="300" class="header-logo">
+      <nav id="navbar">
+        <div class="header-logo" data-aos="fade-right" data-aos-delay="300">
           T
         </div>
-        <div data-aos="fade-left" data-aos-delay="300" class="burger-nav">
+        <div id="mobile-nav" class="mobile-nav">
+          <div class="mobile-nav-links">
+            <ul>
+              <a href="#section-about-me"><li>About</li></a>
+              <a href="#section-project-showcase"><li>Projects</li></a>
+              <a href="#section-contact-me"><li>Contact</li></a>
+              <button>
+                <div class="button-overlay"></div>
+                Resume
+              </button>
+            </ul>
+          </div>
+        </div>
+        <div
+          id="burger-nav"
+          class="burger-nav"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
           <ul>
             <li></li>
             <li></li>
             <li></li>
           </ul>
         </div>
+
         <div
           data-aos="fade-left"
           data-aos-delay="300"
@@ -40,9 +64,9 @@
         >
           <ol>
             <div class="nav-links">
-              <li>About</li>
-              <li>Projects</li>
-              <li>Contact</li>
+              <a href="#section-about-me"><li>About</li></a>
+              <a href="#section-project-showcase"><li>Projects</li></a>
+              <a href="#section-contact-me"><li>Contact</li></a>
               <button>
                 <div class="button-overlay"></div>
                 Resume
@@ -82,7 +106,7 @@
         </section>
         <!-- ABOUT SECTION -->
         <section id="section-about-me">
-          <h3 data-aos="fade-left" data-aos-delay="100" class="about-heading">
+          <h3 data-aos="fade-left" class="about-heading">
             About Me
           </h3>
           <div class="about-container">
@@ -318,7 +342,7 @@
       </main>
     </div>
 
-    <!-- FLOATING SOCAIL ICONS -->
+    <!-- FLOATING SOCIAL ICONS -->
     <div data-aos="slide-up" class="floting-social">
       <div class="floating-social-container">
         <ul>
@@ -348,4 +372,20 @@
       AOS.init();
     </script>
   </body>
+  <script>
+    // Nav Overlay toggle
+    function toggleMenu() {
+      var x = document.getElementById("mobile-nav");
+      if (x.style.visibility === "visible") {
+        x.style.width = "0";
+        x.style.visibility = "hidden";
+        x.style.transform = "translateX(100vw)";
+      } else {
+        x.style.width = "70%";
+        x.style.visibility = "visible";
+        x.style.transform = "translateX(0vw)";
+      }
+    }
+    document.getElementById("burger-nav").addEventListener("click", toggleMenu);
+  </script>
 </html>

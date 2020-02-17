@@ -144,8 +144,13 @@ table {
   font-family: "SF Mono";
   src: url("/fonts/Sf/SFMonoRegular.woff") format("woff");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
+  overflow-x: hidden;
   box-sizing: border-box;
   background-color: #0a192f;
   font-family: Calibre;
@@ -166,6 +171,9 @@ header nav {
   z-index: 10;
 }
 header nav .burer-nav {
+  display: none;
+}
+header nav .mobile-nav {
   display: none;
 }
 header nav .header-logo {
@@ -225,7 +233,7 @@ header nav .nav-links-container ol .nav-links button:hover {
 }
 
 .content main {
-  width: 100%;
+  width: 80%;
   max-width: 1600px;
   padding: 0 150px;
   margin: 0 auto;
@@ -627,9 +635,46 @@ footer {
   header nav .nav-links-container {
     display: none;
   }
+  header nav .mobile-nav {
+    display: block;
+    visibility: hidden;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #172a45;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+  header nav .mobile-nav .mobile-nav-links {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  header nav .mobile-nav .mobile-nav-links ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 140px;
+    align-items: center;
+  }
+  header nav .mobile-nav .mobile-nav-links ul a {
+    text-align: center;
+    font-size: 17px;
+    font-family: SF Mono, San Fransisco, Roboto;
+    padding: 40px 0;
+  }
+  header nav .mobile-nav .mobile-nav-links ul a li {
+    height: 30px;
+    color: #64ffda;
+  }
   header nav .burger-nav {
     display: block;
-    position: relative;
+    margin: 10px;
+    z-index: 100;
   }
   header nav .burger-nav ul li {
     margin: 10px 0;
