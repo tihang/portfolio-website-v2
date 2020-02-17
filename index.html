@@ -11,24 +11,31 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tihang Rai | Full-Stack Web Dev</title>
-    <link rel="stylesheet" href="css/styles.css" />
     <script
       src="https://kit.fontawesome.com/f1494ea61d.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- NAVIGATION  -->
     <header>
       <nav>
-        <div class="header-logo">T</div>
+        <div data-aos="fade-right" data-aos-delay="300" class="header-logo">
+          T
+        </div>
         <div class="burger-nav"></div>
-        <div class="nav-links-container">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="300"
+          class="nav-links-container"
+        >
           <ol>
             <div class="nav-links">
               <li>About</li>
-              <li>Experience</li>
               <li>Projects</li>
+              <li>Contact</li>
               <button>
                 <div class="button-overlay"></div>
                 Resume
@@ -42,45 +49,74 @@
     <!-- CONTENT -->
     <div class="content">
       <main>
+        <!-- HERO SECTION -->
         <section id="section-title-hero">
-          <h1 class="title-greeting">Hi, my name is</h1>
-          <h2 class="title">Tihang Rai.</h2>
-          <h3 class="title-desc">I build things for the www.</h3>
-          <p class="title-intro">
-            I'm a software developer based in NYC specializing in building and
+          <h1 data-aos="fade-in" data-aos-delay="600" class="title-greeting">
+            Hi, my name is
+          </h1>
+          <h2 data-aos="fade-in" data-aos-delay="600" class="title">
+            Tihang Rai.
+          </h2>
+          <h3 data-aos="fade-in" data-aos-delay="1200" class="title-desc">
+            I build things for the www.
+          </h3>
+          <p data-aos="fade-in" data-aos-delay="1200" class="title-intro">
+            I'm a full stack developer based in NYC specializing in building and
             occasionally designing exceptional, high-quality web applications.
           </p>
-          <a href="mailto:tihang.rai@mail.citytech.cuny.edu">
+          <a
+            data-aos="fade-right"
+            data-aos-delay="2000"
+            href="mailto:tihang.rai@mail.citytech.cuny.edu"
+          >
             Get in touch
             <i class="far fa-envelope"></i>
           </a>
         </section>
-
+        <!-- ABOUT SECTION -->
         <section id="section-about-me">
-          <h3 class="about-heading">About Me</h3>
+          <h3 data-aos="fade-left" data-aos-delay="100" class="about-heading">
+            About Me
+          </h3>
           <div class="about-container">
-            <div class="about-text-container">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="400"
+              class="about-text-container"
+            >
               <p>
-                Hello! I'm Tihang, a software engineer based in NYC metro area
+                Hello! I'm Tihang, a Full-Stack engineer based in NYC metro area
                 who enjoys building things that live on the internet. I develop
                 exceptional websites and web apps that provide intuitive,
                 pixel-perfect user interfaces with efficient and modern
                 backends.
               </p>
               <p>
-                Shortly after graduating from New York City College of Tech, I
-                started working with Javascript and its libraries.
+                About to graduate from
+                <a href="http://www.citytech.cuny.edu/" target="_blank"
+                  >New York City College of Tech</a
+                >, I am working with Javascript and its libraries. Particulary
+                building powerful single-page applications using the MERN Stack.
               </p>
               <p>
-                Here are a few technologies I've been working with recently:
+                Here are a few languages and technologies i am currently working
+                with:
               </p>
               <ul>
-                <li>React with Redux</li>
+                <li>Javascript [ES6]</li>
+                <li>React</li>
                 <li>Redux</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>HTML & CSS</li>
               </ul>
             </div>
 
-            <a href="https://github.com/tihang" target="_blank"
+            <a
+              data-aos="fade-down"
+              data-aos-delay="800"
+              href="https://github.com/tihang"
+              target="_blank"
               ><div class="about-img-container">
                 <div class="about-img-wrapper">
                   <div class="about-img-back-overlay"></div>
@@ -95,23 +131,214 @@
           </div>
         </section>
 
-        <section id="section-title-hero">
-          <h1 class="title-greeting">Hi, my name is</h1>
-          <h2 class="title">Tihang Rai.</h2>
-          <h3 class="title-desc">I build things for the www.</h3>
-          <p class="title-intro">
-            I'm a software developer based in NYC specializing in building and
-            occasionally designing exceptional, high-quality web applications.
+        <!-- PROJECTS SECTION -->
+        <section id="section-project-showcase">
+          <h3
+            data-aos="fade-left"
+            data-aos-delay="400"
+            class="project-showcase-heading"
+          >
+            Projects
+          </h3>
+          <!-- FIRST PROJECT -->
+          <div class="project-showcase-container">
+            <a href="https://ecommerce-a.herokuapp.com/" target="_blank">
+              <div
+                class="showcase-image-container"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <div class="image-overlay"></div>
+                <img src="img/project-1.png" alt="photo" />
+              </div>
+            </a>
+            <div
+              class="showcase-desc-container"
+              data-aos="fade-left"
+              data-aos-delay="800"
+            >
+              <h3>Featured Project</h3>
+              <a href="https://ecommerce-a.herokuapp.com/" target="_blank"
+                ><h1>E-Commerce Platform</h1></a
+              >
+              <div class="desc-text">
+                <p>
+                  A e-commerce platform with with landing page, product display,
+                  user authentication, user profile, cart and checkout features.
+                  I am currently working on this project, adding and refactoring
+                  features.
+                </p>
+              </div>
+              <div class="tech-desc">
+                <p>React</p>
+                <p>Redux</p>
+                <p>Express</p>
+                <p>MongoDB</p>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/tihang/e-commerce-store"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://ecommerce-a.herokuapp.com/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second PROJECT -->
+          <div class="project-showcase-container">
+            <a href="https://young-earth-54031.herokuapp.com/" target="_blank">
+              <div
+                class="showcase-image-container"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <div class="image-overlay"></div>
+                <img
+                  src="img/project-3.png"
+                  style="object-position: left"
+                  alt="photo"
+                />
+              </div>
+            </a>
+            <div
+              class="showcase-desc-container"
+              data-aos="fade-left"
+              data-aos-delay="800"
+            >
+              <h3>Featured Project</h3>
+              <a href="https://young-earth-54031.herokuapp.com/" target="_blank"
+                ><h1>Restaurant Search</h1></a
+              >
+              <div class="desc-text">
+                <p>
+                  One of my first projects done in React. Utilizes an open
+                  source restaurant database with over 25k restaurants in NYC to
+                  search and find restaurants and their Grade
+                </p>
+              </div>
+              <div class="tech-desc">
+                <p>React</p>
+                <p>Express</p>
+                <p>GoogleMaps API</p>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/tihang/nyc-restaurant-finder"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://young-earth-54031.herokuapp.com/"
+                  target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- THIRD PROJECT -->
+          <div class="project-showcase-container">
+            <a href="https://weather-app145.herokuapp.com/" target="_blank">
+              <div
+                class="showcase-image-container"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <div class="image-overlay"></div>
+                <img
+                  src="img/project-2.png"
+                  style="object-position: top"
+                  alt="photo"
+                />
+              </div>
+            </a>
+            <div
+              class="showcase-desc-container"
+              data-aos="fade-left"
+              data-aos-delay="800"
+            >
+              <h3>Featured Project</h3>
+              <a href="https://weather-app145.herokuapp.com/" target="_blank"
+                ><h1>Weather Watch</h1></a
+              >
+              <div class="desc-text">
+                <p>
+                  A weather watcher application that uses Open Weather's API to
+                  get data. User can register and login to create their profile,
+                  and also save cities to their watchlist.
+                </p>
+              </div>
+              <div class="tech-desc">
+                <p>React</p>
+                <p>Express</p>
+                <p>OpenWeather API</p>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/tihang/anchor-weather-watch"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://weather-app145.herokuapp.com/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTECT ME SECTION -->
+        <section id="section-contact-me">
+          <h3 data-aos="fade-in" data-aos-delay="400">What next?</h3>
+          <h4 data-aos="fade-right" data-aos-delay="800">Get In Touch</h4>
+          <p data-aos="fade-left" data-aos-delay="400">
+            I am currently seeking full-time/ part-time position as a developer.
+            Feel free to contact me .
           </p>
-          <a href="mailto:tihang.rai@mail.citytech.cuny.edu">
-            Get in touch
-            <i class="far fa-envelope"></i>
+          <a
+            data-aos="flip-up"
+            data-aos-delay="400"
+            href="mailto:tihang.rai@mail.citytech.cuny.edu"
+          >
+            <button>
+              <i class="far fa-envelope"></i>
+            </button>
           </a>
         </section>
       </main>
     </div>
 
-    <div class="floting-social-container"></div>
-    <div class="floating-email-contiainer"></div>
+    <!-- FLOATING SOCAIL ICONS -->
+    <div data-aos="slide-up" class="floting-social">
+      <div class="floating-social-container">
+        <ul>
+          <li><i class="fab fa-linkedin"></i></li>
+          <li><i class="fab fa-github"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FLOATING EMAIL -->
+    <div data-aos="slide-up" class="floating-email">
+      <div class="floating-email-container">
+        <p>
+          <a href="mailto:tihang.rai@mail.citytech.cuny.edu"
+            >tihang.rai@mail.citytech.cuny.edu</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <footer></footer>
   </body>
+
+  <!-- Init AOS script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

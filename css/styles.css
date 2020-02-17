@@ -154,6 +154,12 @@ body {
   font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  font-family: Calibre Regular, SF Mono;
+}
+
 header nav {
   display: flex;
   justify-content: space-between;
@@ -228,12 +234,13 @@ header nav .nav-links-container ol .nav-links button:hover {
   counter-reset: section 0;
 }
 .content main #section-title-hero {
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   max-width: 1000px;
-  min-height: 90vh;
+  min-height: 100vh;
   margin: 0 auto;
 }
 .content main #section-title-hero .title-greeting {
@@ -246,7 +253,7 @@ header nav .nav-links-container ol .nav-links button:hover {
   font-size: 80px;
   font-family: Calibre, SF Mono;
   line-height: 1.3;
-  color: #ccd6f6;
+  color: #a8b2d1;
 }
 .content main #section-title-hero .title-desc {
   font-size: 70px;
@@ -281,7 +288,7 @@ header nav .nav-links-container ol .nav-links button:hover {
   align-items: flex-start;
   justify-content: center;
   max-width: 1000px;
-  min-height: 90vh;
+  min-height: 100vh;
   margin: 0 auto;
 }
 .content main #section-about-me .about-heading {
@@ -290,7 +297,7 @@ header nav .nav-links-container ol .nav-links button:hover {
   margin-right: auto;
   font-size: 32px;
   font-family: Calibre Regular, SF Mono;
-  color: #ccd6f6;
+  color: #a8b2d1;
   width: 100%;
   font-weight: 600;
   white-space: nowrap;
@@ -329,6 +336,16 @@ header nav .nav-links-container ol .nav-links button:hover {
 .content main #section-about-me .about-container .about-text-container p {
   margin-bottom: 20px;
 }
+.content main #section-about-me .about-container .about-text-container ul li::before {
+  content: "";
+  background-color: #15c39a;
+  border-radius: 50%;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  margin-right: 12px;
+  margin-bottom: 3px;
+}
 .content main #section-about-me .about-container .about-img-container .about-img-wrapper {
   position: relative;
   height: 100%;
@@ -337,14 +354,12 @@ header nav .nav-links-container ol .nav-links button:hover {
 }
 .content main #section-about-me .about-container .about-img-container .about-img-wrapper .about-img-back-overlay {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 4px;
+  left: 4px;
   z-index: -1;
   height: 100%;
   width: 100%;
-  border: 6px solid rgba(100, 255, 218, 0.8);
-  border-radius: 4px;
-  transition: transform 0.4s ease-in-out 0s;
+  background-color: #8892b0;
 }
 .content main #section-about-me .about-container .about-img-container .about-img-wrapper img {
   height: 300px;
@@ -352,15 +367,262 @@ header nav .nav-links-container ol .nav-links button:hover {
   max-width: 300px;
   border-radius: 4px;
   object-fit: cover;
+  object-position: left top;
   background-position: center;
 }
-.content main #section-about-me .about-container .about-img-container .about-img-wrapper:hover .about-img-back-overlay {
-  transform: translate(-6px, -6px);
+.content main #section-project-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding-bottom: 150px;
+  margin: 0 auto;
+}
+.content main #section-project-showcase .project-showcase-heading {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  font-size: 32px;
+  font-family: Calibre Regular, SF Mono;
+  color: #a8b2d1;
+  width: 100%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.content main #section-project-showcase .project-showcase-heading::before {
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  margin-bottom: -5px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #64ffda;
+  font-size: 20px;
+}
+.content main #section-project-showcase .project-showcase-heading::after {
+  content: "";
+  margin: 0 20px;
+  height: 1px;
+  background-color: #2d3952;
+  width: 280px;
+}
+.content main #section-project-showcase .project-showcase-container {
+  display: flex;
+  width: 100%;
+  margin: 40px 0px;
+  justify-content: space-between;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container {
+  height: 300px;
+  max-width: 400px;
+  position: relative;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container .image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(168, 178, 209, 0.3);
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container:hover .image-overlay {
+  background-color: rgba(255, 255, 255, 0);
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  height: 100%;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container h3 {
+  font-size: 13px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #64ffda;
+  margin: 10px 0;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container h1 {
+  font-family: Calibre, SF Mono;
+  color: #a8b2d1;
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 28px;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container h1:hover {
+  color: #64ffda;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .desc-text {
+  margin-top: 10px;
+  align-self: flex-end;
+  background-color: #172a45;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .desc-text p {
+  font-family: Calibre Regular, SF Mono;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #a8b2d1;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .tech-desc {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .tech-desc p {
+  padding: 10px;
+  color: #a8b2d1;
+  font-size: 14px;
+  font-family: SF Mono, San Fransisco, Roboto;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .social-links {
+  display: flex;
+  justify-content: flex-end;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .social-links i {
+  padding: 12px;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .social-links i:hover {
+  color: yellow;
+}
+.content main #section-contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  margin-top: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.content main #section-contact-me h3 {
+  color: #64ffda;
+  font-size: 14px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  margin: 10px 0;
+}
+.content main #section-contact-me h3::before {
+  counter-increment: section 1;
+  content: "0" counter(section) "." " ";
+  font-size: 12px;
+}
+.content main #section-contact-me h4 {
+  color: #a8b2d1;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.3;
+  font-family: Calibre, SF Mono;
+}
+.content main #section-contact-me p {
+  margin: 20px 0;
+  font-size: 20;
+  font-family: Calibre Regular, SF Mono;
+  text-align: center;
+  color: #8892b0;
+}
+.content main #section-contact-me button {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 15px 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #0a192f;
+  border: 1px solid #64ffda;
+}
+.content main #section-contact-me button i {
+  color: #64ffda;
+}
+.content main #section-contact-me button:hover i {
+  color: yellow;
+}
+
+.floting-social {
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  z-index: 100;
+}
+.floting-social .floating-social-container {
+  display: flex;
+}
+.floting-social .floating-social-container ul li i {
+  font-size: 26px;
+  color: #a8b2d1;
+  padding: 10px;
+  cursor: pointer;
+}
+.floting-social .floating-social-container ul li i:hover {
+  color: yellow;
+}
+.floting-social .floating-social-container ul::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  display: block;
+  background-color: #a8b2d1;
+  margin-left: 21px;
+  z-index: 100;
+  height: 10vh;
+}
+
+.floating-email {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  z-index: 100;
+}
+.floating-email .floating-email-container {
+  display: flex;
+}
+.floating-email .floating-email-container p a {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #a8b2d1;
+  line-height: 2rem;
+  bottom: 10px;
+  padding-bottom: 10px;
+}
+.floating-email .floating-email-container p a:hover {
+  color: yellow;
+}
+.floating-email .floating-email-container p::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  display: block;
+  background-color: #a8b2d1;
+  margin-left: 15px;
+  height: 10vh;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
 }
 
 @media (max-width: 850px) {
   .content main {
     padding: 0 70px;
+  }
+
+  .floating-email {
+    display: none;
+  }
+
+  .floting-social {
+    display: none;
   }
 }
 @media (max-width: 720px) {
