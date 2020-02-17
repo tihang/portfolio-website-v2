@@ -29,9 +29,11 @@
     <!-- NAVIGATION  -->
     <header>
       <nav id="navbar">
-        <div class="header-logo" data-aos="fade-right" data-aos-delay="300">
-          T
-        </div>
+        <a href="/">
+          <div class="header-logo" data-aos="fade-right" data-aos-delay="300">
+            T
+          </div>
+        </a>
         <div id="mobile-nav" class="mobile-nav">
           <div class="mobile-nav-links">
             <ol>
@@ -104,7 +106,7 @@
           </h3>
           <p data-aos="fade-in" data-aos-delay="1200" class="title-intro">
             I'm a full stack developer based in NYC specializing in building and
-            occasionally designing exceptional, high-quality web applications.
+            designing exceptional, high-quality web applications.
           </p>
           <a
             data-aos="fade-right"
@@ -205,10 +207,8 @@
               >
               <div class="desc-text">
                 <p>
-                  A e-commerce platform with with landing page, product display,
-                  user authentication, user profile, cart and checkout features.
-                  I am currently working on this project, adding and refactoring
-                  features.
+                  An e-commerce platform with many features. I am currently
+                  working on this project, adding and refactoring features.
                 </p>
               </div>
               <div class="tech-desc">
@@ -337,8 +337,8 @@
           <h3 data-aos="fade-in" data-aos-delay="400">What next?</h3>
           <h4 data-aos="fade-right" data-aos-delay="800">Get In Touch</h4>
           <p data-aos="fade-left" data-aos-delay="400">
-            I am currently seeking full-time/ part-time position as a developer.
-            Feel free to contact me .
+            I am currently seeking full-time|part-time positions as a developer.
+            Please feel free to contact me .
           </p>
           <a
             data-aos="flip-up"
@@ -396,15 +396,31 @@
         x.style.visibility = "visible";
         x.style.transform = "translateX(0vw)";
       }
-    }
-    document.getElementById("burger-nav").addEventListener("click", toggleMenu);
-
-    // New Hamburger toggle
-    // Class Toggle
-    document.getElementById("hamburger").addEventListener("click", function() {
+      // Active class toggle
       document.getElementById("hamburger").classList.toggle("is-active");
-    });
+    }
 
+    // Toggle menu open close
     document.getElementById("hamburger").addEventListener("click", toggleMenu);
+
+    // Toggle menu off if nav items are clicked
+    document
+      .getElementsByClassName("mobile-nav")[0]
+      .addEventListener("click", toggleMenu);
+
+    // Scroll listener for navbar
+    var lastScrollTop = 0;
+    $(window).scroll(function() {
+      var st = $(this).scrollTop();
+      var banner = $("nav");
+      setTimeout(function() {
+        if (st > lastScrollTop) {
+          banner.addClass("hide");
+        } else {
+          banner.removeClass("hide");
+        }
+        lastScrollTop = st;
+      }, 100);
+    });
   </script>
 </html>
