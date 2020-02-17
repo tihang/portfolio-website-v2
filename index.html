@@ -10,7 +10,7 @@
       Rai, Web development, Javascript, New York City, NYC"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Tihang Rai | Full-Stack Web Dev</title>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -28,68 +28,72 @@
   <body>
     <!-- NAVIGATION  -->
     <header>
-      <nav id="navbar">
-        <a href="/">
-          <div class="header-logo" data-aos="fade-right" data-aos-delay="300">
-            T
+      <div data-aos="fade-down" id="navbar">
+        <nav>
+          <a href="/">
+            <div class="header-logo" data-aos="fade-right" data-aos-delay="300">
+              T
+            </div>
+          </a>
+          <div id="mobile-nav" class="mobile-nav">
+            <div class="mobile-nav-links">
+              <ol>
+                <a href="#section-about-me"><li>About</li></a>
+                <a href="#section-project-showcase"><li>Projects</li></a>
+                <a href="#section-contact-me"><li>Contact</li></a>
+                <button>
+                  <div class="button-overlay"></div>
+                  <a href="./files/resume.pdf" target="_blank">Resume</a>
+                </button>
+              </ol>
+            </div>
           </div>
-        </a>
-        <div id="mobile-nav" class="mobile-nav">
-          <div class="mobile-nav-links">
+          <button
+            id="hamburger"
+            class="hamburger hamburger--elastic"
+            type="button"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+
+          <div
+            id="burger-nav"
+            class="burger-nav"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-delay="300"
+            class="nav-links-container"
+          >
             <ol>
-              <a href="#section-about-me"><li>About</li></a>
-              <a href="#section-project-showcase"><li>Projects</li></a>
-              <a href="#section-contact-me"><li>Contact</li></a>
-              <button>
-                <div class="button-overlay"></div>
-                Resume
-              </button>
+              <div class="nav-links">
+                <a href="#section-about-me"><li>About</li></a>
+                <a href="#section-project-showcase"><li>Projects</li></a>
+                <a href="#section-contact-me"><li>Contact</li></a>
+                <a href="./files/resume.pdf" target="_blank">
+                  <button>
+                    <div class="button-overlay"></div>
+                    Resume
+                  </button>
+                </a>
+              </div>
             </ol>
           </div>
-        </div>
-        <button
-          id="hamburger"
-          class="hamburger hamburger--elastic"
-          type="button"
-          data-aos="fade-left"
-          data-aos-delay="300"
-        >
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-
-        <div
-          id="burger-nav"
-          class="burger-nav"
-          data-aos="fade-left"
-          data-aos-delay="300"
-        >
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-
-        <div
-          data-aos="fade-left"
-          data-aos-delay="300"
-          class="nav-links-container"
-        >
-          <ol>
-            <div class="nav-links">
-              <a href="#section-about-me"><li>About</li></a>
-              <a href="#section-project-showcase"><li>Projects</li></a>
-              <a href="#section-contact-me"><li>Contact</li></a>
-              <button>
-                <div class="button-overlay"></div>
-                Resume
-              </button>
-            </div>
-          </ol>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <!-- CONTENT -->
@@ -107,8 +111,8 @@
             I build things for the www.
           </h3>
           <p data-aos="fade-in" data-aos-delay="1200" class="title-intro">
-            I'm a full stack developer based in NYC specializing in building and
-            designing exceptional, high-quality web applications.
+            I'm a full stack developer based in NYC specializing in designing
+            and developing high quality web applications.
           </p>
           <a
             data-aos="fade-right"
@@ -133,9 +137,8 @@
               <p>
                 Hello! I'm Tihang, a Full-Stack engineer based in NYC metro area
                 who enjoys building things that live on the internet. I develop
-                exceptional websites and web apps that provide intuitive,
-                pixel-perfect user interfaces with efficient and modern
-                backends.
+                websites and web apps using modern tools and technologies that
+                provide intuitive
               </p>
               <p>
                 About to graduate from
@@ -181,7 +184,7 @@
         <section id="section-project-showcase">
           <h3
             data-aos="fade-left"
-            data-aos-delay="400"
+            data-aos-delay="200"
             class="project-showcase-heading"
           >
             Projects
@@ -356,18 +359,30 @@
     </div>
 
     <!-- FLOATING SOCIAL ICONS -->
-    <div data-aos="slide-up" class="floting-social">
+    <div data-aos="slide-up" data-aos-delay="2000" class="floting-social">
       <div class="floating-social-container">
         <ul>
-          <li><i class="fab fa-linkedin"></i></li>
-          <li><i class="fab fa-github"></i></li>
-          <li><i class="fab fa-instagram"></i></li>
+          <li>
+            <a href="https://www.linkedin.com/in/tihangrai" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tihang" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/tihang" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- FLOATING EMAIL -->
-    <div data-aos="slide-up" class="floating-email">
+    <div data-aos="slide-up" data-aos-delay="2000" class="floating-email">
       <div class="floating-email-container">
         <p>
           <a href="mailto:tihang.rai@mail.citytech.cuny.edu"
@@ -377,55 +392,95 @@
       </div>
     </div>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-social-icons">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/tihangrai" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tihang" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/tihang" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <!-- Init AOS script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-  </body>
-  <script>
-    // Nav Overlay toggle
-    function toggleMenu() {
-      var x = document.getElementById("mobile-nav");
-      if (x.style.visibility === "visible") {
-        x.style.width = "0";
-        x.style.visibility = "hidden";
-        x.style.transform = "translateX(100vw)";
-      } else {
-        x.style.width = "70%";
-        x.style.visibility = "visible";
-        x.style.transform = "translateX(0vw)";
+    <script>
+      // Scroll listener
+      /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-200px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+
+      // Nav Overlay toggle
+      function toggleMenu() {
+        var x = document.getElementById("mobile-nav");
+        if (x.style.visibility === "visible") {
+          x.style.width = "0";
+          x.style.visibility = "hidden";
+          x.style.transform = "translateX(100vw)";
+        } else {
+          x.style.width = "70%";
+          x.style.visibility = "visible";
+          x.style.transform = "translateX(0vw)";
+        }
+        // Active class toggle
+        document.getElementById("hamburger").classList.toggle("is-active");
       }
-      // Active class toggle
-      document.getElementById("hamburger").classList.toggle("is-active");
-    }
 
-    // Toggle menu open close
-    document.getElementById("hamburger").addEventListener("click", toggleMenu);
+      // Toggle menu open close
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", toggleMenu);
 
-    // Toggle menu off if nav items are clicked
-    document
-      .getElementsByClassName("mobile-nav")[0]
-      .addEventListener("click", toggleMenu);
+      // Toggle menu off if nav items are clicked
+      document
+        .getElementsByClassName("mobile-nav")[0]
+        .addEventListener("click", toggleMenu);
 
-    // Close menu if body is clicked
-    document.getElementsByTagName("html").addEventListener("click", toggleMenu);
+      // Toggle menu off if the page is scrolled
+      document.onscroll = function() {
+        var x = document.getElementById("mobile-nav");
+        if (x.style.visibility === "visible") {
+          x.style.width = "0";
+          x.style.visibility = "hidden";
+          x.style.transform = "translateX(100vw)";
+          document.getElementById("hamburger").classList.toggle("is-active");
+        }
+      };
 
-    // Scroll listener for navbar
-    // var lastScrollTop = 0;
-    // $(window).scroll(function() {
-    //   var st = $(this).scrollTop();
-    //   var banner = $("nav");
-    //   setTimeout(function() {
-    //     if (st > lastScrollTop) {
-    //       banner.addClass("hide");
-    //     } else {
-    //       banner.removeClass("hide");
-    //     }
-    //     lastScrollTop = st;
-    //   }, 100);
-    // });
-  </script>
+      // Toggle menu off if the content is clicked
+      document
+        .getElementsByClassName("content")[0]
+        .addEventListener("click", function() {
+          var x = document.getElementById("mobile-nav");
+          if (x.style.visibility === "visible") {
+            x.style.width = "0";
+            x.style.visibility = "hidden";
+            x.style.transform = "translateX(100vw)";
+          }
+        });
+    </script>
+  </body>
 </html>
