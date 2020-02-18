@@ -12,11 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Tihang Rai | Full-Stack Web Dev</title>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+
     <script
       src="https://kit.fontawesome.com/f1494ea61d.js"
       crossorigin="anonymous"
@@ -419,7 +415,7 @@
         if (prevScrollpos > currentScrollPos) {
           document.getElementById("navbar").style.top = "0";
         } else {
-          if (currentScrollPos > 200) {
+          if (currentScrollPos > 180) {
             document.getElementById("navbar").style.top = "-200px";
           }
         }
@@ -472,6 +468,7 @@
             x.style.width = "0";
             x.style.visibility = "hidden";
             x.style.transform = "translateX(100vw)";
+            document.getElementById("hamburger").classList.toggle("is-active");
           }
         });
     </script>
