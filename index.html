@@ -107,22 +107,23 @@
           <h2 data-aos="fade-in" data-aos-delay="600" class="title">
             Tihang Rai.
           </h2>
-          <h3 data-aos="fade-in" data-aos-delay="1200" class="title-desc">
+          <h3 data-aos="fade-in" data-aos-delay="700" class="title-desc">
             I build things for the www.
           </h3>
-          <p data-aos="fade-in" data-aos-delay="1200" class="title-intro">
+          <p data-aos="fade-in" data-aos-delay="700" class="title-intro">
             I'm a full stack developer based in NYC specializing in designing
             and developing high quality web applications.
           </p>
           <a
             data-aos="fade-right"
-            data-aos-delay="2000"
+            data-aos-delay="800"
             href="mailto:tihang.rai@mail.citytech.cuny.edu"
           >
             Get in touch
             <i class="far fa-envelope"></i>
           </a>
         </section>
+
         <!-- ABOUT SECTION -->
         <section id="section-about-me">
           <h3 data-aos="fade-left" class="about-heading">
@@ -131,7 +132,7 @@
           <div class="about-container">
             <div
               data-aos="fade-right"
-              data-aos-delay="400"
+              data-aos-delay="100"
               class="about-text-container"
             >
               <p>
@@ -163,7 +164,7 @@
 
             <a
               data-aos="fade-down"
-              data-aos-delay="800"
+              data-aos-delay="100"
               href="https://github.com/tihang"
               target="_blank"
               ><div class="about-img-container">
@@ -182,11 +183,7 @@
 
         <!-- PROJECTS SECTION -->
         <section id="section-project-showcase">
-          <h3
-            data-aos="fade-left"
-            data-aos-delay="200"
-            class="project-showcase-heading"
-          >
+          <h3 data-aos="fade-left" class="project-showcase-heading">
             Projects
           </h3>
           <!-- FIRST PROJECT -->
@@ -195,7 +192,7 @@
               <div
                 class="showcase-image-container"
                 data-aos="fade-up"
-                data-aos-delay="600"
+                data-aos-delay="100"
               >
                 <div class="image-overlay"></div>
                 <img src="img/project-1.png" alt="photo" />
@@ -204,7 +201,7 @@
             <div
               class="showcase-desc-container"
               data-aos="fade-left"
-              data-aos-delay="800"
+              data-aos-delay="100"
             >
               <h3>Featured Project</h3>
               <a href="https://ecommerce-a.herokuapp.com/" target="_blank"
@@ -241,7 +238,7 @@
               <div
                 class="showcase-image-container"
                 data-aos="fade-up"
-                data-aos-delay="600"
+                data-aos-delay="100"
               >
                 <div class="image-overlay"></div>
                 <img
@@ -254,7 +251,7 @@
             <div
               class="showcase-desc-container"
               data-aos="fade-left"
-              data-aos-delay="800"
+              data-aos-delay="100"
             >
               <h3>Featured Project</h3>
               <a href="https://young-earth-54031.herokuapp.com/" target="_blank"
@@ -292,7 +289,7 @@
               <div
                 class="showcase-image-container"
                 data-aos="fade-up"
-                data-aos-delay="600"
+                data-aos-delay="100"
               >
                 <div class="image-overlay"></div>
                 <img
@@ -305,7 +302,7 @@
             <div
               class="showcase-desc-container"
               data-aos="fade-left"
-              data-aos-delay="800"
+              data-aos-delay="100"
             >
               <h3>Featured Project</h3>
               <a href="https://weather-app145.herokuapp.com/" target="_blank"
@@ -339,9 +336,9 @@
 
         <!-- CONTECT ME SECTION -->
         <section id="section-contact-me">
-          <h3 data-aos="fade-in" data-aos-delay="400">What next?</h3>
-          <h4 data-aos="fade-right" data-aos-delay="800">Get In Touch</h4>
-          <p data-aos="fade-left" data-aos-delay="400">
+          <h3 data-aos="fade-in">What's next?</h3>
+          <h4 data-aos="fade-right" data-aos-delay="300">Get In Touch</h4>
+          <p data-aos="fade-left" data-aos-delay="200">
             I am currently seeking full-time|part-time positions as a developer.
             Please feel free to contact me .
           </p>
@@ -413,12 +410,6 @@
         </ul>
       </div>
     </footer>
-
-    <!-- Init AOS script -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
     <script>
       // Scroll listener
       /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
@@ -428,7 +419,9 @@
         if (prevScrollpos > currentScrollPos) {
           document.getElementById("navbar").style.top = "0";
         } else {
-          document.getElementById("navbar").style.top = "-200px";
+          if (currentScrollPos > 200) {
+            document.getElementById("navbar").style.top = "-200px";
+          }
         }
         prevScrollpos = currentScrollPos;
       };
@@ -481,6 +474,12 @@
             x.style.transform = "translateX(100vw)";
           }
         });
+    </script>
+
+    <!-- Init AOS script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
