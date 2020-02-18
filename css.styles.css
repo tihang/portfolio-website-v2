@@ -1,0 +1,815 @@
+@import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("../fonts/Calibre/calibre-test-bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Calibre Regular";
+  src: url("../fonts/Calibre/calibre-test-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "SF Mono";
+  src: url("/fonts/Sf/SFMonoRegular.woff") format("woff");
+}
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #0a192f;
+  font-family: Calibre, SF Mono;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: Calibre Regular, SF Mono;
+}
+
+header #navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+  transition: top 0.3s;
+}
+header #navbar nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 26px;
+  width: 100%;
+  background-color: #0a192f;
+  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+}
+header #navbar nav .hamburger {
+  display: none;
+}
+header #navbar nav .mobile-nav {
+  display: none;
+}
+header #navbar nav .header-logo {
+  font-size: 23px;
+  color: #64ffda;
+  cursor: pointer;
+  border: 3px solid #64ffda;
+  padding: 10px;
+  font-weight: 600;
+}
+header #navbar nav .header-logo:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+header #navbar nav .nav-links-container {
+  margin-right: 50px;
+  margin-left: auto;
+}
+header #navbar nav .nav-links-container ol {
+  counter-reset: counter;
+}
+header #navbar nav .nav-links-container ol .nav-links {
+  display: flex;
+  align-items: center;
+}
+header #navbar nav .nav-links-container ol .nav-links li {
+  counter-increment: counter;
+  color: #8892b0;
+  font-family: SF Mono, San Fransisco, Roboto;
+  margin: 0 20px;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+header #navbar nav .nav-links-container ol .nav-links li:hover {
+  color: rgba(100, 255, 218, 0.8);
+  cursor: pointer;
+}
+header #navbar nav .nav-links-container ol .nav-links li::before {
+  content: "0" counter(counter) "." " ";
+  text-align: right;
+  font-family: monospace;
+  color: #64ffda;
+  font-size: 12px;
+}
+header #navbar nav .nav-links-container ol .nav-links button {
+  position: relative;
+  background-color: #0a192f;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  cursor: pointer;
+  padding: 10px 18px;
+  margin-left: 10px;
+}
+header #navbar nav .nav-links-container ol .nav-links button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.content {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+.content main {
+  max-width: 1600px;
+  padding: 0 150px;
+  margin: 0 auto;
+  counter-reset: section 0;
+}
+.content main #section-title-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.content main #section-title-hero .title-greeting {
+  font-size: 16px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #64ffda;
+  margin-left: 2px;
+}
+.content main #section-title-hero .title {
+  font-size: 80px;
+  font-family: Calibre, SF Mono;
+  line-height: 1.3;
+  color: #a8b2d1;
+}
+.content main #section-title-hero .title-desc {
+  font-size: 70px;
+  font-family: Calibre, SF Mono;
+  color: #8892b0;
+  margin: 0 12px;
+}
+.content main #section-title-hero .title-intro {
+  font-family: Calibre Regular, SF Mono;
+  margin: 24px 7px;
+  font-size: 21px;
+  color: #8892b0;
+  line-height: 1.3;
+}
+.content main #section-title-hero a {
+  background-color: #0a192f;
+  color: #64ffda;
+  border-radius: 4px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  cursor: pointer;
+  padding: 10px 18px;
+  margin-left: 10px;
+  text-decoration: none;
+  background-color: rgba(100, 255, 218, 0.1);
+}
+.content main #section-title-hero a:hover i {
+  color: yellow;
+}
+.content main #section-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 200px auto;
+}
+.content main #section-about-me .about-heading {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  font-size: 32px;
+  font-family: Calibre Regular, SF Mono;
+  color: #a8b2d1;
+  width: 100%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.content main #section-about-me .about-heading::before {
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  margin-bottom: -5px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #64ffda;
+  font-size: 20px;
+}
+.content main #section-about-me .about-heading::after {
+  content: "";
+  margin: 0 20px;
+  height: 1px;
+  background-color: #2d3952;
+  width: 100%;
+  max-width: 280px;
+}
+.content main #section-about-me .about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+  width: 100%;
+}
+.content main #section-about-me .about-container .about-text-container {
+  max-width: 500px;
+  width: 70%;
+  font-size: 20px;
+  font-family: Calibre Regular, SF Mono;
+  line-height: 1.3;
+  color: #8892b0;
+}
+.content main #section-about-me .about-container .about-text-container p {
+  margin-bottom: 20px;
+}
+.content main #section-about-me .about-container .about-text-container ul li::before {
+  content: "";
+  background-color: #15c39a;
+  border-radius: 50%;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  margin-right: 12px;
+  margin-bottom: 3px;
+}
+.content main #section-about-me .about-container .about-img-container .about-img-wrapper {
+  position: relative;
+  height: 100%;
+  max-width: 300px;
+  margin-left: 40px;
+}
+.content main #section-about-me .about-container .about-img-container .about-img-wrapper .about-img-back-overlay {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #8892b0;
+}
+.content main #section-about-me .about-container .about-img-container .about-img-wrapper img {
+  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: left top;
+  background-position: center;
+}
+.content main #section-project-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 200px;
+  padding-bottom: 400px;
+  margin: 0 auto;
+}
+.content main #section-project-showcase .project-showcase-heading {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  font-size: 32px;
+  font-family: Calibre Regular, SF Mono;
+  color: #a8b2d1;
+  width: 100%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.content main #section-project-showcase .project-showcase-heading::before {
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  margin-bottom: -5px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #64ffda;
+  font-size: 20px;
+}
+.content main #section-project-showcase .project-showcase-heading::after {
+  content: "";
+  margin: 0 20px;
+  height: 1px;
+  background-color: #2d3952;
+  width: 280px;
+}
+.content main #section-project-showcase .project-showcase-container {
+  display: flex;
+  width: 100%;
+  margin: 60px 0px;
+  justify-content: space-between;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container {
+  height: 300px;
+  max-width: 400px;
+  position: relative;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container .image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(168, 178, 209, 0.5);
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-image-container:hover .image-overlay {
+  background-color: rgba(255, 255, 255, 0);
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  height: 100%;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container h3 {
+  font-size: 13px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #64ffda;
+  margin: 10px 0;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container h1 {
+  font-family: Calibre, SF Mono;
+  color: #a8b2d1;
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 28px;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container h1:hover {
+  color: #64ffda;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .desc-text {
+  margin-top: 10px;
+  align-self: flex-end;
+  background-color: #172a45;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .desc-text p {
+  font-family: Calibre Regular, SF Mono;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #a8b2d1;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .tech-desc {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .tech-desc p {
+  padding: 10px;
+  color: #a8b2d1;
+  font-size: 14px;
+  font-family: SF Mono, San Fransisco, Roboto;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .social-links {
+  display: flex;
+  justify-content: flex-end;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .social-links i {
+  padding: 12px;
+}
+.content main #section-project-showcase .project-showcase-container .showcase-desc-container .social-links i:hover {
+  color: yellow;
+}
+.content main #section-contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+  margin-top: 70px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.content main #section-contact-me h3 {
+  color: #64ffda;
+  font-size: 14px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  margin: 10px 0;
+}
+.content main #section-contact-me h3::before {
+  counter-increment: section 1;
+  content: "0" counter(section) "." " ";
+  font-size: 12px;
+}
+.content main #section-contact-me h4 {
+  text-align: center;
+  color: #a8b2d1;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.3;
+  font-family: Calibre, SF Mono;
+}
+.content main #section-contact-me p {
+  margin: 20px 0;
+  font-size: 20;
+  font-family: Calibre Regular, SF Mono;
+  text-align: center;
+  color: #8892b0;
+}
+.content main #section-contact-me button {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 15px 50px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #0a192f;
+  border: 1px solid #64ffda;
+}
+.content main #section-contact-me button i {
+  color: #64ffda;
+}
+.content main #section-contact-me button:hover i {
+  color: yellow;
+}
+
+.floting-social {
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  z-index: 100;
+}
+.floting-social .floating-social-container {
+  display: flex;
+}
+.floting-social .floating-social-container ul li i {
+  font-size: 26px;
+  color: #a8b2d1;
+  padding: 10px;
+  cursor: pointer;
+}
+.floting-social .floating-social-container ul li i:hover {
+  color: yellow;
+}
+.floting-social .floating-social-container ul::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  display: block;
+  background-color: #a8b2d1;
+  margin-left: 21px;
+  z-index: 100;
+  height: 10vh;
+}
+
+.floating-email {
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  z-index: 100;
+}
+.floating-email .floating-email-container {
+  display: flex;
+}
+.floating-email .floating-email-container p a {
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  font-family: SF Mono, San Fransisco, Roboto;
+  color: #a8b2d1;
+  line-height: 2rem;
+  bottom: 10px;
+  padding-bottom: 10px;
+}
+.floating-email .floating-email-container p a:hover {
+  color: yellow;
+}
+.floating-email .floating-email-container p::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  display: block;
+  background-color: #a8b2d1;
+  margin-left: 15px;
+  height: 10vh;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+}
+footer .footer-social-icons {
+  display: none;
+}
+footer .footer-social-icons ul li a i:hover {
+  color: yellow;
+}
+
+@media (max-width: 850px) {
+  .content main {
+    padding: 0 50px;
+  }
+
+  .floating-email {
+    display: none;
+  }
+
+  .floting-social {
+    display: none;
+  }
+
+  footer .footer-social-icons {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footer-social-icons ul {
+    display: flex;
+  }
+  footer .footer-social-icons ul li {
+    margin: 0 auto;
+    padding: 25px;
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 720px) {
+  header #navbar nav .nav-links-container {
+    display: none;
+  }
+  header #navbar nav .mobile-nav {
+    display: block;
+    visibility: visible;
+    width: 0;
+    margin: 0 auto;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #172a45;
+    transform: translateX(200vw);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+  header #navbar nav .mobile-nav .mobile-nav-links {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  header #navbar nav .mobile-nav .mobile-nav-links ol {
+    counter-reset: counter;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    margin-top: 140px;
+    text-align: center;
+  }
+  header #navbar nav .mobile-nav .mobile-nav-links ol a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 17px;
+    font-family: SF Mono, San Fransisco, Roboto;
+    padding: 40px 0;
+  }
+  header #navbar nav .mobile-nav .mobile-nav-links ol a li {
+    counter-increment: counter;
+    height: 30px;
+    color: #8892b0;
+  }
+  header #navbar nav .mobile-nav .mobile-nav-links ol a li::before {
+    content: "0" counter(counter) "." " ";
+    text-align: right;
+    font-family: monospace;
+    color: #64ffda;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+  }
+  header #navbar nav .mobile-nav .mobile-nav-links ol a li:hover {
+    color: #64ffda;
+  }
+  header #navbar nav .hamburger {
+    outline: none;
+    display: block;
+    margin-left: auto;
+    margin-left: auto;
+    margin-right: 50px;
+    z-index: 100;
+  }
+  header #navbar nav .hamburger .hamburger-inner,
+header #navbar nav .hamburger .hamburger-inner::before,
+header #navbar nav .hamburger .hamburger-inner::after {
+    background-color: #64ffda;
+  }
+  header #navbar nav .hamburger.is-active .hamburger-inner,
+header #navbar nav .hamburger.is-active .hamburger-inner::before,
+header #navbar nav .hamburger.is-active .hamburger-inner::after {
+    background-color: #64ffda;
+  }
+
+  .content main {
+    padding: 0 25px;
+  }
+  .content main #section-title-hero .title-greeting {
+    font-size: 14px;
+  }
+  .content main #section-title-hero .title {
+    font-size: 65px;
+  }
+  .content main #section-title-hero .title-desc {
+    font-size: 50px;
+  }
+  .content main #section-title-hero .title-intro {
+    font-size: 18px;
+  }
+  .content main #section-about-me .about-heading {
+    font-size: 28px;
+  }
+  .content main #section-about-me .about-heading::after {
+    max-width: 200px;
+  }
+  .content main #section-about-me .about-container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .content main #section-about-me .about-container .about-text-container {
+    max-width: 500px;
+    width: 100%;
+    font-size: 18px;
+    font-family: Calibre Regular, SF Mono;
+    line-height: 1.3;
+    color: #8892b0;
+  }
+  .content main #section-about-me .about-container .about-text-container p {
+    margin-bottom: 20px;
+  }
+  .content main #section-about-me .about-container .about-img-container {
+    margin-top: 50px;
+  }
+  .content main #section-about-me .about-container .about-img-container .about-img-wrapper {
+    margin-left: 10px;
+  }
+  .content main #section-about-me .about-container .about-img-container .about-img-wrapper img {
+    height: 220px;
+    width: 220px;
+  }
+}
+@media (max-width: 691px) {
+  .content main #section-project-showcase .project-showcase-container .showcase-image-container {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: 541px) {
+  .content main #section-project-showcase .project-showcase-container .showcase-image-container {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (max-width: 501px) {
+  .content main #section-project-showcase .project-showcase-container .showcase-image-container {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=css.styles.css.map */
