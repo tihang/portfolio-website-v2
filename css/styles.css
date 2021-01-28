@@ -307,8 +307,8 @@ header #navbar nav .nav-links-container ol .nav-links button:hover {
   align-items: flex-start;
   justify-content: center;
   max-width: 1000px;
-  min-height: 100vh;
-  margin: 200px auto;
+  min-height: 90vh;
+  margin: 0 auto;
 }
 .content main #section-about-me .about-heading {
   display: flex;
@@ -398,8 +398,8 @@ header #navbar nav .nav-links-container ol .nav-links button:hover {
   max-width: 1000px;
   min-height: 100vh;
   width: 100%;
-  padding-top: 200px;
-  padding-bottom: 400px;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
   margin: 0 auto;
 }
 .content main #section-project-showcase .project-showcase-heading {
@@ -446,16 +446,17 @@ header #navbar nav .nav-links-container ol .nav-links button:hover {
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(168, 178, 209, 0.5);
+  transition: all 0.1s linear;
 }
 .content main #section-project-showcase .project-showcase-container .showcase-image-container img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: left;
 }
-.content main #section-project-showcase .project-showcase-container .showcase-image-container:hover .image-overlay {
+.content main #section-project-showcase .project-showcase-container .showcase-image-container:hover {
   background-color: rgba(255, 255, 255, 0);
+  transform: scale(1.1);
 }
 .content main #section-project-showcase .project-showcase-container .showcase-desc-container {
   display: flex;
@@ -726,24 +727,6 @@ footer .footer-social-icons ul li a i:hover {
   }
   header #navbar nav .mobile-nav .mobile-nav-links ol a li:hover {
     color: #64ffda;
-  }
-  header #navbar nav .mobile-nav .mobile-nav-links ol button {
-    position: relative;
-    background-color: #0a192f;
-    color: #64ffda;
-    border: 1px solid #64ffda;
-    border-radius: 4px;
-    font-family: SF Mono, San Fransisco, Roboto;
-    cursor: pointer;
-    margin-top: 40px;
-    padding: 14px 22px;
-  }
-  header #navbar nav .mobile-nav .mobile-nav-links ol button a {
-    display: block;
-    padding: 0 0;
-  }
-  header #navbar nav .mobile-nav .mobile-nav-links ol button:hover {
-    background-color: rgba(100, 255, 218, 0.1);
   }
   header #navbar nav .hamburger {
     outline: none;
