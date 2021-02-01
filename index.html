@@ -114,28 +114,28 @@
     <div class="content">
       <main>
         <!-- HERO SECTION -->
-        <section id="section-title-hero">
-          <h1 data-aos="fade-in" data-aos-delay="600" class="title-greeting">
-            Hi, my name is
-          </h1>
-          <h2 data-aos="fade-in" data-aos-delay="600" class="title">
-            Tihang Rai.
-          </h2>
-          <h3 data-aos="fade-in" data-aos-delay="700" class="title-desc">
-            I build things for web and mobile.
-          </h3>
-          <p data-aos="fade-in" data-aos-delay="700" class="title-intro">
-            An aspiring developer based in New York City.
-          </p>
-          <a
-            data-aos="fade-right"
-            data-aos-delay="800"
-            href="mailto:tihang.rai@mail.citytech.cuny.edu"
-          >
-            Get in touch
-            <i class="far fa-envelope"></i>
-          </a>
-        </section>
+          <section id="section-title-hero">
+            <h1 data-aos="fade-in" data-aos-delay="600" class="title-greeting">
+              Hi, my name is
+            </h1>
+            <h2 data-aos="fade-in" data-aos-delay="600" class="title">
+              Tihang Rai.
+            </h2>
+            <h3 data-aos="fade-in" data-aos-delay="700" class="title-desc">
+              I build things for web and mobile.
+            </h3>
+            <p data-aos="fade-in" data-aos-delay="700" class="title-intro">
+              An aspiring developer based in New York City.
+            </p>
+            <a
+              data-aos="fade-right"
+              data-aos-delay="800"
+              href="mailto:tihang.rai@mail.citytech.cuny.edu"
+            >
+              Get in touch
+              <i class="far fa-envelope"></i>
+            </a>
+          </section>
 
         <!-- ABOUT SECTION -->
         <section id="section-about-me">
@@ -300,8 +300,8 @@
           </div>
           
           <!-- THIRD PROJECT -->
-          <!-- <div class="project-showcase-container">
-            <a href="https://weather-app145.herokuapp.com/" target="_blank">
+          <div class="project-showcase-container">
+            <a href=" https://recipe-importer.herokuapp.com/" target="_blank">
               <div
                 class="showcase-image-container"
                 data-aos="fade-up"
@@ -309,7 +309,7 @@
               >
                 <div class="image-overlay"></div>
                 <img
-                  src="img/project-2.png"
+                  src="img/api.png"
                   style="object-position: top"
                   alt="photo"
                 />
@@ -321,33 +321,30 @@
               data-aos-delay="100"
             >
               <h3>Featured Project</h3>
-              <a href="https://weather-app145.herokuapp.com/" target="_blank"
-                ><h1>Weather Watch</h1></a
+              <a href="https://recipe-importer.herokuapp.com/" target="_blank"
+                ><h1>Recipie Scraper</h1></a
               >
               <div class="desc-text">
                 <p>
-                  A weather watcher application that uses Open Weather's API to
-                  get data. User can register and login to create their profile,
-                  and also save cities to their watchlist.
+                  A javascript backend which scrapes recipies from a few websites into JSON API
                 </p>
               </div>
               <div class="tech-desc">
-                <p>React</p>
-                <p>Express</p>
-                <p>OpenWeather API</p>
+                <p>Express-js</p>
+                <p>Cheerio-js</p>
               </div>
               <div class="social-links">
                 <a
-                  href="https://github.com/tihang/anchor-weather-watch"
+                  href="https://github.com/tihang/recipe-importer"
                   target="_blank"
                   ><i class="fab fa-github"></i
                 ></a>
-                <a href="https://weather-app145.herokuapp.com/" target="_blank"
+                <a href="https://recipe-importer.herokuapp.com/" target="_blank"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
               </div>
             </div>
-          </div> -->
+          </div>
 
         </section>
 
@@ -368,6 +365,7 @@
             </button>
           </a>
         </section>
+
       </main>
     </div>
 
@@ -405,7 +403,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer id="particles-js">
       <div class="footer-social-icons">
         <ul>
           <li>
@@ -498,5 +496,14 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- PARTICLES JS -->
+    <script src="js/particles.js"></script>
+    <script>
+      particlesJS.load('particles-js', 'js/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+    </script>
+
   </body>
 </html>
